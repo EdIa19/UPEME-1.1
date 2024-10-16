@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nivel 7 - Imágenes</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .error { color: red; font-weight: bold; }
+    .success { color: rgb(0, 0, 0); font-weight: bold; }
+    #output { margin-top: 20px; padding: 10px; border: 1px solid #ccc; min-height: 50px; }
+    .container { display: flex; }
+    .sidebar { width: 30%; padding: 20px; background-color: #f0f0f0; }
+    .editor-preview { width: 70%; padding: 20px; }
+    .next-level { display: none; margin-top: 20px; font-size: 18px; font-weight: bold; }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="sidebar">
+      <h2>Paso 7</h2>
+      <p>Agrega una imagen utilizando la etiqueta <code>&lt;img&gt;</code>.</p>
+      <p>Ejemplo:</p>
+      <pre>&lt;img src="https://www.ejemplo.com/imagen.jpg" alt="Descripción de la imagen"&gt;</pre>
+      <p>Agrega una imagen de un gato.</p>
+    </div>
+
+    <div class="editor-preview">
+      <div class="editor">
+        <textarea id="html-code" placeholder="Escribe tu código HTML aquí..."></textarea>
+        <button onclick="runCode()">Verifica tu Código</button>
+      </div>
+      <div id="output" class="preview"></div>
+      <div id="feedback" class="error"></div>
+      <a id="next-level" class="next-level" href="Nivel8.html">Siguiente Nivel</a>
+    </div>
+  </div>
+
+  <script>
+    function runCode() {
+      const code = document.getElementById('html-code').value;
+      const output = document.getElementById('output');
+      const feedback = document.getElementById('feedback');
+      const nextLevelLink = document.getElementById('next-level');
+
+      feedback.textContent = '';
+      output.innerHTML = code;
+      nextLevelLink.style.display = 'none';
+
+      if (code.includes("<img ") && code.includes("src=")) {
+        feedback.textContent = "¡Bien hecho! Pasa al siguiente nivel 😎";
+        feedback.className = "success";
+        nextLevelLink.style.display = 'block';
+      } else {
+        feedback.textContent = "Error: Verifica que uses la etiqueta &lt;img&gt; correctamente.";
+        feedback.className = "error";
+      }
+    }
+  </script>
+</body>
+</html>

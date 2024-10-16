@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CODE-ZONE</title>
+    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/2728/2728262.png">
+</head>
+<style>
+    body{ 
+      background-image: url("https://png.pngtree.com/thumb_back/fh260/background/20230617/pngtree-creative-3d-wallpaper-featuring-abstract-wavy-forms-on-a-light-blue-image_3609815.jpg");
+      background-size: cover; 
+    }
+   
+    /* Barra de navegación fija */
+    nav {
+        width: 100%;
+        background-color: #333;
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding: 10px 0;
+        z-index: 10;
+    }
+
+    .menu {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .menu li {
+        position: relative;
+    }
+
+    .menu a {
+        text-decoration: none;
+        color: white;
+        padding: 15px 20px;
+        display: block;
+        font-weight: bold;
+    }
+
+    .menu a:hover {
+        background-color: #575757;
+    }
+
+    .submenu {
+        display: none;
+        position: absolute;
+        background-color: #333;
+        top: 100%;
+        left: 0;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .menu li:hover .submenu {
+        display: block;
+    }
+
+    .submenu li a {
+        padding: 10px 20px;
+        width: 150px;
+    }
+
+    .submenu li a:hover {
+        background-color: #575757;
+    }
+
+    .content {
+        margin-top: 100px; /* Ajustar el margen para evitar que el contenido quede oculto */
+    }
+</style>
+<body>
+    <nav>
+        <ul class="menu">
+            <li><a href="Index.html">Inicio</a></li>
+            <li><a href="#">Tutoriales</a>
+                <ul class="submenu">
+                    <li><a href="IntroduccionHTML.html">HTML</a></li>
+                    <li><a href="IntroduccionCSS.html">CSS</a></li>
+                    <li><a href="IntroduccionJS.html">JavaScript</a></li>
+                    <li><a href="IntroduccionPHP.html">PHP</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <h2 style="text-align: center; margin-top: 120px;">Contacto</h2> <!-- Ajustar el margen superior -->
+    <section id="contacto" class="content-section">
+        <div>
+            <p><span style="color: #ffffff;">Contáctanos por WhatsApp:</span></p>
+            <a href="https://wa.me/5525338668" target="_blank">WhatsApp</a>
+            <p><span style="color: #ffffff;">Encuéntranos en Facebook:</span></p>
+            <a href="https://www.facebook.com/profile.php?id=100083019266918" target="_blank">Facebook</a>
+            <p><span style="color: #ffffff;">Encuéntranos en Instagram:</span></p>
+            <a href="https://www.instagram.com/3quetzalcoalt.gam/" target="_blank">Instagram</a>
+            <p>Para aclaraciones, envía un correo electrónico a: <a href="mailto:iglesiaseduardo65@gmail.com">iglesiaseduardo65@gmail.com</a></p>
+            <p>Nuestra ubicación</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1569.16366354452!2d-98.88550996729175!3d19.520637196323623!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1e636a1a08e45%3A0xb5bf171f576de5f3!2sUnidad%20Deportiva%20Silverio%20P%C3%A9rez!5e0!3m2!1ses-419!2smx!4v1691460699211!5m2!1ses-419!2smx" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+</body>
+</html>

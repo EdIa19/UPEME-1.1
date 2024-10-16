@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaJScript</title>
+    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/2728/2728262.png">
+    <style>
+       body {
+            background-image: url("https://images.unsplash.com/photo-1663720409030-db1596ba30a0?q=80&w=2128&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+        
+        background-size: cover; 
+            padding: 10px;
+            text-align: center; /* Texto centrado */
+        }
+
+        h2 {
+            color: #fff;
+            padding: 15px 0;
+            margin: 0;
+            text-align: justify;
+        }
+/* Contenedor de los cuadros */
+.container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px; /* Ajusta el espacio entre los cuadros */
+    padding-top: 5%; /* Reduce el margen superior */
+    margin: 0 auto; /* Centra horizontalmente */
+    max-width: 90%; /* Limita el ancho máximo para centrar */
+}
+
+/* Estilo para los cuadros */
+.cuadrado {
+    width: 200px; /* Ancho aumentado */
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: transform 0.3s;
+    text-decoration: none; /* Elimina el subrayado */
+    margin: 0; /* Quita márgenes */
+}
+
+.cuadrado:hover {
+    transform: scale(1.1);
+}
+
+
+/* Animación al pasar el mouse por encima */
+.cuadrado:hover {
+    transform: scale(1.1);
+}
+
+        /* Colores por niveles */
+        .nivel1 { background-color: #E44D26; }
+        .nivel2 { background-color: #1572B6; }
+        .nivel3 { background-color: #F7DF1E; color: black; }
+        .nivel4 { background-color: #4F5B93; }
+        .nivel5 { background-color: #007396; }
+        .nivel6 { background-color: #4CAF50; }
+        .nivel7 { background-color: #FFC107; color: black; }
+        .nivel8 { background-color: #8E24AA; }
+        .nivel9 { background-color: #FF5722; }
+        .nivel10 { background-color: #3F51B5; }
+
+        .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative; 
+    margin-bottom: 10px; 
+    margin-top: 60px; 
+}
+
+.header img {
+    position: absolute; 
+}
+
+.header img:first-of-type {
+    top: 0; 
+    left: 0; 
+}
+
+.header img:last-of-type {
+    top: 0; 
+    right: 0; 
+}
+
+h1 {
+    color: rgb(255, 255, 255);
+    padding: 10px 0;
+    margin: 5;
+    flex-grow: 1; 
+    text-align: center; 
+}
+
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        nav ul li {
+            display: inline;
+        }
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Estilos para los botones */
+        .cofu {
+            background-color: #ffffff;
+            color: black;
+            height: 50px;
+            width: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            font-size: 12px;
+            border-radius: 5px;
+            margin: 20px;
+            padding: 10px;
+            cursor: pointer;
+            border: 1px solid #000;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .cofu:hover {
+            background-color: #ddd;
+        }
+
+        /* Barra de navegación fija */
+        nav {
+            width: 100%;
+            background-color: #333;
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding: 10px 0;
+            z-index: 10;
+        }
+
+        .menu {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .menu li {
+            position: relative;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: white;
+            padding: 15px 20px;
+            display: block;
+            font-weight: bold;
+        }
+
+        .menu a:hover {
+            background-color: #575757;
+        }
+
+        .submenu {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            top: 100%;
+            left: 0;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .menu li:hover .submenu {
+            display: block;
+        }
+
+        .submenu li a {
+            padding: 10px 20px;
+            width: 150px;
+        }
+
+        .submenu li a:hover {
+            background-color: #575757;
+        }
+        .content {
+    margin-top: 60px; 
+}
+.cuadrado:hover {
+    transform: scale(1.1);
+}
+
+    </style>
+</head>
+<body>
+    
+<div class="header">
+    <img src="https://media2.giphy.com/media/SvFocn0wNMx0iv2rYz/giphy.gif?cid=6c09b9529wnpfnyzw1iwa04on3ipst59d28nxewwb5bskh8r&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=g" alt="Logo html" width="120"> 
+        <h1>En esta página aprenderás a utilizar JavaScript</h1>
+        <img src="https://media2.giphy.com/media/SvFocn0wNMx0iv2rYz/giphy.gif?cid=6c09b9529wnpfnyzw1iwa04on3ipst59d28nxewwb5bskh8r&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=g" alt="Logo html" width="120"> 
+    
+</div>
+
+<hr style="border: none; height: 6px; background-color: rgb(255, 255, 255); width: 100%; margin: 20px auto;"> 
+
+<nav>
+    <ul class="menu">
+        <li><a href="Index.html">Inicio</a></li>
+        <li><a href="#">Tutoriales</a>
+            <ul class="submenu">
+                
+                <li><a href="IntroduccionHTML.html">HTML</a></li>
+                <li><a href="IntroduccionCSS.html">CSS</a></li>
+                <li><a href="IntroduccionPHP.html">PHP</a></li>
+                <li><a href="IntroduccionJAVA.html">JAVA</a></li>
+            </ul>
+        </li>
+        <li><a href="Contacto.html">Contacto</a></li>
+    </ul>
+</nav>
+
+
+<h2>Bienvenido a tus primeras lecciones de JavaScript</h2>
+    <h2>En esta página aprenderás a utilizar JavaScript, el cual crea contenido dinamico, controlar multimedia y animar imagenes.</h2>
+    <hr style="border: none; height: 6px; background-color: rgb(255, 255, 255); width: 100%; margin: 20px auto;"> 
+<div class="container">
+    <a href="nivel1JS.html" class="cuadrado nivel1">Nivel 1</a>
+        <a href="nivel2JS.html" class="cuadrado nivel2">Nivel 2</a>
+        <a href="nivel3JS.html" class="cuadrado nivel3">Nivel 3</a>
+        <a href="nivel4JS.html" class="cuadrado nivel4">Nivel 4</a>
+        <a href="nivel5JS.html" class="cuadrado nivel5">Nivel 5</a>
+        <a href="nivel6cJS.html" class="cuadrado nivel6">Nivel 6</a>
+        <a href="nivel7JS.html" class="cuadrado nivel7">Nivel 7</a>
+        <a href="nivel8JS.html" class="cuadrado nivel8">Nivel 8</a>
+        <a href="nivel9JS.html" class="cuadrado nivel9">Nivel 9</a>
+        <a href="nivel10JS.html" class="cuadrado nivel10">Nivel 10</a>
+        
+    
+    
+</div>
+</body>
+</html>
